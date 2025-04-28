@@ -1,0 +1,300 @@
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* För att hålla komponenterna vertikalt */
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Flex-container för att hålla Profile och Todo bredvid varandra */
+.app-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Profilkomponenten */
+.profile, .todo-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%; /* Sätt till 100% för att ta upp hela bredden inom max-width */
+  text-align: center;
+}
+
+.profile {
+  flex: 1; /* Gör Profile-komponenten flexibel */
+  position: fixed; /* Fixerar profilen på skärmen */
+  top: 20px; /* Justera avståndet från toppen */
+  left: 20px; /* Justera avståndet från vänster */
+  width: 300px; /* Fast bredd för profil */
+  z-index: 10; /* Säkerställ att den är ovanpå andra element */
+  background-color: #ffffff;
+  margin: 0;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-container {
+  flex: 1; /* Gör Todo-komponenten flexibel */
+  max-width: 600px; /* Maxbredd på Todo-listan */
+  margin-top: 20px; /* Justera avståndet för mindre skärmar */
+}
+
+.todo-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Här fixar vi raden för inputfält och knappar */
+.todo-inputs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.todo-inputs input[type="text"],
+.todo-inputs input[type="date"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.todo-inputs button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Grön knapp för "Lägg till" */
+.todo-inputs button:not(.clear-btn) {
+  background-color: #4caf50;
+  color: white;
+}
+
+.todo-inputs button:not(.clear-btn):hover {
+  background-color: #45a049;
+}
+
+/* Röd knapp för "Rensa alla" */
+.clear-btn {
+  background-color: #e53935;
+  color: white;
+}
+
+.clear-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Todo-listan */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.done-btn {
+  background-color: #4caf50; /* grön */
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.done-btn:hover {
+  background-color: #45a049; /* lite mörkare grön vid hover */
+}
+
+/* Ingen todo-text */
+p {
+  text-align: center;
+  color: #666;
+}
+
+/* Profilens inre innehåll */
+.profile-container {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-stats p {
+  margin: 5px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 16px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.4s ease;
+}
+
+.profile-badges {
+  margin-top: 20px;
+}
+
+.profile-badges ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-badges li {
+  padding: 6px 0;
+}
+
+.logout-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.logout-btn {
+  padding: 10px 20px;
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hela appens wrapper */
+.app-wrapper {
+  display: flex;
+  gap: 30px; /* Skapa ett stort mellanrum mellan komponenterna */
+  flex-wrap: wrap; /* Gör så att komponenterna kan brytas till nästa rad */
+  width: 100%;
+  padding: 30px; /* Ge hela appen ett fint yttre avstånd */
+  box-sizing: border-box;
+  background: linear-gradient(135deg, rgb(55, 0, 255), #8c00ff); /* Gradientbakgrund för en cool känsla */
+  border-radius: 12px; /* Lägg till rundade hörn */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Lätt skugga för att lyfta innehållet */
+  margin: auto; /* Centrerar innehållet på sidan */
+  max-width: 1200px; /* Sätter ett max-bredd för att förhindra att layouten blir för bred på stora skärmar */
+  transition: transform 0.3s ease; /* Lägger till en animation för smidig övergång */
+}
+
+
+/* Media Query för att justera layouten på små skärmar */
+@media (max-width: 768px) {
+  .app-wrapper {
+    flex-direction: column; /* Placera komponenterna vertikalt på små skärmar */
+    align-items: center; /* Centrerar komponenterna horisontellt */
+  }
+
+  .todo-container, .profile {
+    position: static; /* Gör så att profilen inte är fast på små skärmar */
+    max-width: 100%; /* Gör så att de tar upp hela bredden på små skärmar */
+  }
+}
+
+.set-username {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.set-username form {
+  display: flex;
+  flex-direction: column; /* Gör input och knapp stå ovanpå varandra */
+  align-items: center;
+  gap: 15px; /* Avstånd mellan inputfält och knapp */
+  margin-top: 20px;
+}
+
+.set-username input {
+  width: 300px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease;
+}
+
+.set-username input:focus {
+  border-color: #4c99ff;
+  outline: none;
+}
+
+.set-username button {
+  width: 100px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #4c99ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.set-username button:hover {
+  background-color: #3e80d6;
+}
+.set-username h2 {
+  color: white;
+}

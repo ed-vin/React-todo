@@ -1,0 +1,76 @@
+/* Fixerad profilkomponent */
+.profile-fixed {
+  position: fixed;
+  top: 20px;  /* Justera avståndet från toppen */
+  left: 20px; /* Justera avståndet från vänster */
+  width: 300px;  /* Ge den en fast bredd */
+  z-index: 10;  /* Se till att den är ovanpå andra element */
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 0;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Resten av profildesignen */
+.profile-container {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-stats p {
+  margin: 5px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 16px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.4s ease;
+}
+
+.profile-badges {
+  margin-top: 20px;
+}
+
+.profile-badges ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-badges li {
+  padding: 6px 0;
+}
+
+.logout-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.logout-btn {
+  padding: 10px 20px;
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}

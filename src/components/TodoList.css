@@ -1,0 +1,111 @@
+.todo-container {
+  position: fixed;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todo-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Här fixar vi raden! */
+.todo-inputs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.todo-inputs input[type="text"],
+.todo-inputs input[type="date"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.todo-inputs button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Grön knapp för "Lägg till" */
+.todo-inputs button:not(.clear-btn) {
+  background-color: #4caf50;
+  color: white;
+}
+
+.todo-inputs button:not(.clear-btn):hover {
+  background-color: #45a049;
+}
+
+/* Röd knapp för "Rensa alla" */
+.clear-btn {
+  background-color: #e53935;
+  color: white;
+}
+
+.clear-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Todo-listan */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.done-btn {
+  background-color: #4caf50; /* grön */
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.done-btn:hover {
+  background-color: #45a049; /* lite mörkare grön vid hover */
+}
+
+
+/* Ingen todo-text */
+p {
+  text-align: center;
+  color: #666;
+}
