@@ -2,6 +2,8 @@
 
 A simple **React** todo app where users create a username, complete tasks, earn points, level up, and unlock badges. All data is stored in **LocalStorage**.
 
+## Link: https://ed-vin.github.io/React-todo/
+
 ## ✨ Features
 
 - Create and save a username
