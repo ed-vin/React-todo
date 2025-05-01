@@ -6,9 +6,9 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #2196f3, #64b5f6);  /* Blue gradient */
-  color: black; /* All text color is black */
+  font-family: "San Francisco", "Helvetica Neue", sans-serif; /* Apple's typografi */
+  background: #121212; /* Mörk bakgrund */
+  color: #e0e0e0; /* Ljus textfärg för god kontrast mot mörk bakgrund */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,58 +21,61 @@ body {
 .app-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-between;
+  gap: 24px;
+  justify-content: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   padding: 30px;
-  background: #e3f2fd;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  color: black; /* All text is black */
+  background: #1d1d1d; /* Mörk bakgrund på wrapper */
+  border: 2px solid #333; /* Dov grå kant */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Mjuk skugga */
 }
 
 /* === Kortkomponenter === */
 .profile,
 .todo-container,
 .profile-container {
-  background: #f7fbff;
-  border: 2px solid #2196f3;
-  border-radius: 18px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  padding: 2rem;
+  background: #2a2a2a; /* Mörkgrå bakgrund på kort */
+  border: 1px solid #333; /* Grå kant */
+  border-radius: 14px;
+  padding: 24px;
   width: 100%;
   max-width: 400px;
-  color: black; /* All text is black */
+  min-width: 280px;
+  color: #e0e0e0; /* Ljus textfärg */
   text-align: center;
-}
-
-.profile {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  width: 300px;
-  z-index: 10;
-}
-
-.todo-container {
-  max-width: 800px;
-  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* === Rubriker === */
 h2 {
-  font-size: 26px;
-  margin-bottom: 20px;
-  color: black; /* All text is black */
+  font-size: 28px; /* Större rubrikstorlek för bättre läsbarhet */
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #e0e0e0; /* Ljus textfärg på rubriker */
+  text-shadow: 1px 1px 2px #121212; /* Mild textskugga för bättre läsbarhet */
 }
 
+h3 {
+  font-size: 24px; /* Större rubrikstorlek för bättre läsbarhet */
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #e0e0e0; /* Ljus textfärg på rubriker */
+  text-shadow: 1px 1px 2px #121212; /* Mild textskugga för bättre läsbarhet */
+}
+
+p {
+  font-size: 18px; /* Större textstorlek för ökad läsbarhet */
+  color: #e0e0e0; /* Ljus textfärg */
+  margin-bottom: 16px;
+}
 /* === Inputfält === */
 .todo-inputs,
 .set-username form {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 16px;
   margin-bottom: 20px;
   justify-content: center;
 }
@@ -80,57 +83,60 @@ h2 {
 input[type="text"],
 input[type="date"],
 .set-username input {
-  flex: 1;
-  padding: 12px;
-  border-radius: 10px;
-  border: 2px solid #2196f3;
-  font-size: 16px;
-  background-color: #fff;
-  color: black; /* All text is black */
-  transition: border 0.3s ease;
+  flex: 1 1 100%;
+  padding: 14px; /* Större padding för mer utrymme */
+  border-radius: 8px;
+  border: 1px solid #444; /* Dov kant för inputfält */
+  font-size: 18px; /* Större text för bättre läsbarhet */
+  background-color: #333; /* Mörk bakgrund på inputfält */
+  color: #e0e0e0; /* Ljus text */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 input:focus {
-  border-color: #1976d2;
+  border: 2px solid #24d2bb; /* Turkos kant på fokus */
   outline: none;
+  box-shadow: none; /* Ta bort box-shadow vid fokus */
 }
 
 /* === Knappar === */
 .btn {
-  padding: 12px 20px;
-  border-radius: 10px;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid #444; /* Dov kant på knappar */
+  font-size: 18px; /* Större text på knappar */
+  font-weight: bold;
+  background: #333; /* Mörk bakgrund på knappar */
+  color: #e0e0e0; /* Ljus text på knappar */
   cursor: pointer;
-  background-color: #2196f3;
-  color: black; /* All text is black */
-  transition: background-color 0.3s ease, transform 0.2s;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.1s, border-color 0.3s ease;
 }
 
+/* Hover effekt på knappar */
 .btn:hover {
-  background-color: #1976d2;
-  transform: scale(1.05);
+  background: #444; /* Lite ljusare på hover */
+  border-color: #24d2bb; /* Turkos kant på hover */
+  transform: none; /* Ta bort transformering på hover */
 }
 
+/* === Done Button === */
 .done-btn {
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  padding: 0;
-  background-color: #2196f3;
-  color: black; /* All text is black */
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #24d2bb; /* Turkos bakgrund för "klar" knapp */
+  color: #e0e0e0;
   border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
 }
 
+/* Ta bort hover-effekter för done-btn */
 .done-btn:hover {
-  background-color: #1976d2;
+  background-color: #24d2bb; /* Samma bakgrund på hover */
+  transform: none;
 }
 
 /* === Todo-lista === */
@@ -141,12 +147,13 @@ input:focus {
 }
 
 .todo-list li {
-  background: #fff;
-  color: black; /* All text is black */
-  padding: 14px 18px;
-  border-radius: 10px;
+  background: #444; /* Mörkgrå bakgrund för lista */
+  color: #e0e0e0; /* Ljus text */
+  padding: 14px 20px; /* Större padding för bättre läsbarhet */
+  border-radius: 8px;
   margin-bottom: 10px;
-  border-left: 5px solid #2196f3;
+  border-left: 5px solid #24d2bb; /* Turkos vänsterkant för aktiv uppgift */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -154,69 +161,64 @@ input:focus {
 
 .todo-list li.completed span {
   text-decoration: line-through;
-  color: #555;
+  color: #888; /* Ljusare text för slutförda uppgifter */
 }
 
-/* === Profilinfo === */
-.profile-stats p,
-.profile-badges li {
-  margin: 6px 0;
-  color: black; /* All text is black */
-}
-
-/* === Framsteg === */
+/* === Progress-bar === */
 .progress-bar {
   width: 100%;
-  height: 18px;
-  background-color: #bbdefb;
-  border-radius: 9px;
+  height: 12px;
+  background-color: #333; /* Mörkgrå bakgrund för progress bar */
+  border-radius: 6px;
   overflow: hidden;
   margin-top: 10px;
+  border: 1px inset #444; /* Ljusare kant på progress bar */
 }
 
 .progress {
   height: 100%;
-  background-color: #2196f3;
-  transition: width 0.4s ease;
+  background-color: #24d2bb; /* Turkos färg för progress */
 }
 
-/* === Logout === */
-.logout-btn-wrapper {
-  margin-top: 20px;
-  text-align: center;
-}
-
-/* === Användarnamn === */
+/* === Text & Info === */
+.profile-stats p,
+.profile-badges li,
+p,
+p.info-text,
 .set-username {
+  font-size: 18px; /* Större textstorlek för ökad läsbarhet */
+  color: #e0e0e0; /* Ljus textfärg */
   text-align: center;
-  margin-top: 50px;
-  color: black; /* All text is black */
 }
 
 .set-username h2 {
-  color: black; /* All text is black */
+  font-size: 28px; /* Större rubrikstorlek för bättre läsbarhet */
+  margin-bottom: 16px;
+  color: #e0e0e0; /* Ljus text på rubriker */
 }
 
 .set-username button {
   width: 140px;
 }
 
-/* === Info-text === */
-p,
-p.info-text {
-  text-align: center;
-  color: black; /* All text is black */
-}
-
 /* === Responsivitet === */
 @media (max-width: 768px) {
   .app-wrapper {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    padding: 20px;
   }
 
-  .profile {
-    position: static;
-    max-width: 100%;
+  .todo-inputs {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .done-btn {
+    margin-left: auto;
   }
 }
