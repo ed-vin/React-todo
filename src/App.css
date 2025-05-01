@@ -1,4 +1,4 @@
-/* App.css */
+/* === Reset & Base === */
 * {
   margin: 0;
   padding: 0;
@@ -6,112 +6,134 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #2b2b2b;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2196f3, #64b5f6);  /* Blue gradient */
+  color: black; /* All text color is black */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   padding: 20px;
-  color: #000;
 }
 
+/* === Wrapper === */
 .app-wrapper {
   display: flex;
-  justify-content: space-between;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
   width: 100%;
-  padding: 30px;
-  box-sizing: border-box;
-  background: linear-gradient(135deg, rgb(55, 0, 255), #8c00ff);
-  border-radius: 12px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  margin: auto;
   max-width: 1200px;
-  transition: transform 0.3s ease;
+  padding: 30px;
+  background: #e3f2fd;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: black; /* All text is black */
 }
 
+/* === Kortkomponenter === */
 .profile,
-.todo-container {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.todo-container,
+.profile-container {
+  background: #f7fbff;
+  border: 2px solid #2196f3;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   padding: 2rem;
-  max-width: 400px;
   width: 100%;
+  max-width: 400px;
+  color: black; /* All text is black */
   text-align: center;
-  color: #000;
 }
 
 .profile {
-  flex: 1;
   position: fixed;
   top: 20px;
   left: 20px;
   width: 300px;
   z-index: 10;
-  margin: 0;
 }
 
 .todo-container {
-  flex: 1;
-  max-width: 600px;
+  max-width: 800px;
   margin-top: 20px;
 }
 
-.todo-container h2 {
-  text-align: center;
+/* === Rubriker === */
+h2 {
+  font-size: 26px;
   margin-bottom: 20px;
-  color: #000;
+  color: black; /* All text is black */
 }
 
-.todo-inputs {
+/* === Inputfält === */
+.todo-inputs,
+.set-username form {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 12px;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
-.todo-inputs input[type="text"],
-.todo-inputs input[type="date"] {
+input[type="text"],
+input[type="date"],
+.set-username input {
   flex: 1;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #2196f3;
   font-size: 16px;
-  color: #000;
   background-color: #fff;
+  color: black; /* All text is black */
+  transition: border 0.3s ease;
 }
 
-.todo-inputs button {
-  padding: 8px 12px;
-  border-radius: 6px;
+input:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+/* === Knappar === */
+.btn {
+  padding: 12px 20px;
+  border-radius: 10px;
   border: none;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  background-color: #2196f3;
+  color: black; /* All text is black */
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.todo-inputs button:not(.clear-btn) {
-  background-color: #4caf50;
-  color: white;
+.btn:hover {
+  background-color: #1976d2;
+  transform: scale(1.05);
 }
 
-.todo-inputs button:not(.clear-btn):hover {
-  background-color: #45a049;
+.done-btn {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  padding: 0;
+  background-color: #2196f3;
+  color: black; /* All text is black */
+  border: none;
+  transition: background-color 0.3s ease;
 }
 
-.clear-btn {
-  background-color: #e53935;
-  color: white;
+.done-btn:hover {
+  background-color: #1976d2;
 }
 
-.clear-btn:hover {
-  background-color: #d32f2f;
-}
-
+/* === Todo-lista === */
 .todo-list {
   list-style: none;
   padding: 0;
@@ -119,183 +141,80 @@ body {
 }
 
 .todo-list li {
+  background: #fff;
+  color: black; /* All text is black */
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border-left: 5px solid #2196f3;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
-  padding: 10px 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  color: #000;
 }
 
 .todo-list li.completed span {
   text-decoration: line-through;
-  color: #999;
+  color: #555;
 }
 
-.done-btn {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 4px 8px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 14px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s;
+/* === Profilinfo === */
+.profile-stats p,
+.profile-badges li {
+  margin: 6px 0;
+  color: black; /* All text is black */
 }
 
-.done-btn:hover {
-  background-color: #45a049;
-}
-
-/* Standardtext */
-p {
-  text-align: center;
-  color: #000;
-}
-
-/* Grå informations-text */
-p.info-text {
-  color: #666;
-}
-
-/* Profilinnehåll */
-.profile-container {
-  background-color: #ffffff;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 600px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  color: #000;
-}
-
-.profile-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000;
-}
-
-.profile-stats p {
-  margin: 5px 0;
-  color: #000;
-}
-
+/* === Framsteg === */
 .progress-bar {
   width: 100%;
-  height: 16px;
-  background-color: #e0e0e0;
-  border-radius: 8px;
-  margin: 10px 0;
+  height: 18px;
+  background-color: #bbdefb;
+  border-radius: 9px;
   overflow: hidden;
+  margin-top: 10px;
 }
 
 .progress {
   height: 100%;
-  background-color: #4caf50;
+  background-color: #2196f3;
   transition: width 0.4s ease;
 }
 
-.profile-badges {
-  margin-top: 20px;
-}
-
-.profile-badges ul {
-  list-style: none;
-  padding: 0;
-}
-
-.profile-badges li {
-  padding: 6px 0;
-  color: #000;
-}
-
+/* === Logout === */
 .logout-btn-wrapper {
-  display: flex;
-  justify-content: center;
   margin-top: 20px;
-}
-
-.logout-btn {
-  padding: 10px 20px;
-  background-color: #ff6666;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* Användarnamn */
-.set-username {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
   text-align: center;
-  color: #000;
 }
 
-.set-username form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.set-username input {
-  width: 300px;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  color: #000;
-  background-color: #fff;
-  transition: border 0.3s ease;
-}
-
-.set-username input:focus {
-  border-color: #4c99ff;
-  outline: none;
-}
-
-.set-username button {
-  width: 100px;
-  padding: 12px;
-  font-size: 16px;
-  background-color: #4c99ff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.set-username button:hover {
-  background-color: #3e80d6;
+/* === Användarnamn === */
+.set-username {
+  text-align: center;
+  margin-top: 50px;
+  color: black; /* All text is black */
 }
 
 .set-username h2 {
-  color: white;
+  color: black; /* All text is black */
 }
 
-/* Responsivitet */
+.set-username button {
+  width: 140px;
+}
+
+/* === Info-text === */
+p,
+p.info-text {
+  text-align: center;
+  color: black; /* All text is black */
+}
+
+/* === Responsivitet === */
 @media (max-width: 768px) {
   .app-wrapper {
     flex-direction: column;
     align-items: center;
   }
 
-  .todo-container,
   .profile {
     position: static;
     max-width: 100%;
