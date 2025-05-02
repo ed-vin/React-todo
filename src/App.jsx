@@ -15,7 +15,7 @@ function App() {
   const pointsPerLevel = 100;
 
   const levelBadges = [
-    { level: 1, text: 'Nybörjare!' },
+    { level: 3, text: 'Nybörjare!' },
     { level: 5, text: 'Uppgiftsexpert' },
     { level: 10, text: 'Mästare av nivåer!' },
     { level: 30, text: 'Poängkung' },
