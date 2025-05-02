@@ -13,9 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Lägg till digitalt typsnitt */
 .matrix-mode {
-  font-family: 'Press Start 2P', monospace; /* Här appliceras det digitala typsnittet */
   background-color: #000000 !important;
   color: #00ff00 !important;
 }
@@ -38,7 +36,6 @@ body {
 .matrix-mode {
   background-color: #000000 !important;
   color: #00ff00 !important;
-  font-family: 'Press Start 2P', monospace !important; /* Digitalt typsnitt i Matrix-läge */
 }
 
 .matrix-mode button,
