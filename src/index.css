@@ -13,11 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* === Reset & Baslayout === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Lägg till digitalt typsnitt */
+.matrix-mode {
+  font-family: 'Press Start 2P', monospace; /* Här appliceras det digitala typsnittet */
+  background-color: #000000 !important;
+  color: #00ff00 !important;
 }
 
 body {
@@ -31,6 +31,34 @@ body {
   padding: 20px;
   background-color: #1b1b1b;
   color: #e0e0e0;
+  transition: background-color 0.3s, color 0.3s; /* För smidig övergång */
+}
+
+/* === Matrix-stil === */
+.matrix-mode {
+  background-color: #000000 !important;
+  color: #00ff00 !important;
+  font-family: 'Press Start 2P', monospace !important; /* Digitalt typsnitt i Matrix-läge */
+}
+
+.matrix-mode button,
+.matrix-mode input,
+.matrix-mode a {
+  background-color: black !important;
+  color: #00ff00 !important;
+  border-color: #00ff00 !important;
+}
+
+.matrix-mode button:hover {
+  background-color: #00ff00 !important;
+  color: black !important;
+}
+
+/* === Reset & Baslayout === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -38,6 +66,7 @@ a {
   color: #24d2bb;
   text-decoration: none;
 }
+
 a:hover {
   color: #1bb3a3;
 }
@@ -53,6 +82,7 @@ h2, h3 {
   color: #e0e0e0;
   text-shadow: 1px 1px 2px #121212;
 }
+
 h2 { font-size: 28px; }
 h3 { font-size: 24px; }
 

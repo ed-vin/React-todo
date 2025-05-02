@@ -11,6 +11,7 @@ function App() {
   const [level, setLevel] = useState(1);
   const [points, setPoints] = useState(0);
   const [badges, setBadges] = useState([]);
+  const [isMatrixMode, setIsMatrixMode] = useState(false);
 
   const pointsPerLevel = 100;
 
@@ -28,6 +29,13 @@ function App() {
     const savedUsername = localStorage.getItem('loggedInUser');
     if (savedUsername) {
       setUsername(savedUsername);
+    }
+
+    // Kolla om användaren tidigare har valt Matrix Mode
+    const savedMatrixMode = localStorage.getItem('matrixMode') === 'true';
+    setIsMatrixMode(savedMatrixMode);
+    if (savedMatrixMode) {
+      document.body.classList.add('matrix-mode');
     }
   }, []);
 
@@ -113,6 +121,19 @@ function App() {
     setNewTodo('');
   };
 
+  const toggleMatrixMode = () => {
+    setIsMatrixMode(prevState => {
+      const newState = !prevState;
+      localStorage.setItem('matrixMode', newState);
+      if (newState) {
+        document.body.classList.add('matrix-mode');
+      } else {
+        document.body.classList.remove('matrix-mode');
+      }
+      return newState;
+    });
+  };
+
   return (
     <div className="app-wrapper">
       {!username ? (
@@ -150,6 +171,9 @@ function App() {
               handleClearTodos={handleClearTodos}
             />
           </div>
+          <button onClick={toggleMatrixMode}>
+            {isMatrixMode ? 'Matrix' : 'Matrix'}
+          </button>
         </>
       )}
     </div>

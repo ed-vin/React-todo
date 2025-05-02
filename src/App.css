@@ -150,3 +150,35 @@ input[type="date"],
     margin-left: auto;
   }
 }
+/* === Matrix-stil === */
+.matrix-mode {
+  background: black !important;
+  color: #00ff00 !important;
+}
+
+.matrix-mode .app-wrapper,
+.matrix-mode .profile,
+.matrix-mode .todo-container,
+.matrix-mode .profile-container,
+.matrix-mode .todo-list li,
+.matrix-mode input[type="text"],
+.matrix-mode input[type="date"],
+.matrix-mode .btn,
+.matrix-mode .done-btn,
+.matrix-mode .progress-bar,
+.matrix-mode .progress {
+  background-color: black !important;
+  border-color: #00ff00 !important;
+  color: #00ff00 !important;
+}
+
+.matrix-mode .progress {
+  background-color: #00ff00 !important;
+}
+
+.matrix-mode .btn,
+.matrix-mode .done-btn {
+  color: black !important;
+  background-color: #00ff00 !important;
+  border-color: #00ff00 !important;
+}
