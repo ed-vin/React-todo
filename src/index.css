@@ -1,0 +1,113 @@
+/* === Global style === */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #121212;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.matrix-mode {
+  background-color: #000000 !important;
+  color: #00ff00 !important;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #1b1b1b;
+  color: #e0e0e0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* === Matrix-mode === */
+.matrix-mode {
+  background-color: #000000 !important;
+  color: #00ff00 !important;
+}
+
+.matrix-mode button,
+.matrix-mode input,
+.matrix-mode a {
+  background-color: black !important;
+  color: #00ff00 !important;
+  border-color: #00ff00 !important;
+}
+
+.matrix-mode button:hover {
+  background-color: #00ff00 !important;
+  color: black !important;
+}
+
+/* === Reset & layout === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  color: #24d2bb;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1bb3a3;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h2, h3 {
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #e0e0e0;
+  text-shadow: 1px 1px 2px #121212;
+}
+
+h2 { font-size: 28px; }
+h3 { font-size: 24px; }
+
+p {
+  font-size: 18px;
+  color: #e0e0e0;
+  margin-bottom: 16px;
+}
+
+button {
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.3s ease;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 0.6em 1.2em;
+  background-color: #24d2bb;
+  color: #121212;
+}
+
+button:hover {
+  background-color: #1bb3a3;
+}
+
+input:focus {
+  border: 2px solid #24d2bb;
+  outline: none;
+  box-shadow: none;
+}
