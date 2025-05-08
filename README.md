@@ -2,7 +2,11 @@
 
 A simple **React** todo app where users create a username, complete tasks, earn points, level up, and unlock badges. All data is stored in **LocalStorage**.
 
+![Screenshot](https://github.com/ed-vin/React-todo-gamification/blob/main/public/screen2.png?raw=true)
+
 ## Link: https://ed-vin.github.io/React-todo-gamification/
+
+![Screenshot](https://github.com/ed-vin/React-todo-gamification/blob/main/public/screen1.png?raw=true)
 
 ## Features
 
