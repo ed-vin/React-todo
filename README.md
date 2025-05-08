@@ -4,10 +4,10 @@ A simple **React** todo app where users create a username, complete tasks, earn 
 
 ![Screenshot](https://github.com/ed-vin/React-todo-gamification/blob/main/public/screen2.png?raw=true)
 
-## Link: https://ed-vin.github.io/React-todo-gamification/
-
 ## Matrix Mode CSS
 ![Screenshot](https://github.com/ed-vin/React-todo-gamification/blob/main/public/screen1.png?raw=true)
+
+## Demo link: https://ed-vin.github.io/React-todo-gamification/
 
 ## Features
 
