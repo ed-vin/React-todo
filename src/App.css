@@ -125,6 +125,7 @@ input[type="date"],
 .set-username h2 {
   font-size: 28px;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .set-username button {
