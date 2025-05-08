@@ -1,4 +1,6 @@
-/* === Wrapper-komponent === */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* === Wrapper component === */
 .app-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -13,7 +15,7 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-/* === Kortkomponenter === */
+/* === Container component === */
 .profile,
 .todo-container,
 .profile-container {
@@ -28,7 +30,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* === Inputfält === */
+/* === Input fields === */
 .todo-inputs,
 .set-username form {
   display: flex;
@@ -51,7 +53,7 @@ input[type="date"],
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* === Knappar === */
+/* === Buttons === */
 .btn {
   font-size: 18px;
   font-weight: bold;
@@ -79,7 +81,7 @@ input[type="date"],
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* === Todo-lista === */
+/* === Todo-list === */
 .todo-list {
   list-style: none;
   padding: 0;
@@ -119,7 +121,7 @@ input[type="date"],
   background-color: #24d2bb;
 }
 
-/* === Användarnamn === */
+/* === Username === */
 .set-username h2 {
   font-size: 28px;
   margin-bottom: 16px;
@@ -129,7 +131,7 @@ input[type="date"],
   width: 140px;
 }
 
-/* === Responsivitet === */
+/* === Responsive === */
 @media (max-width: 768px) {
   .app-wrapper {
     flex-direction: column;
@@ -170,6 +172,8 @@ input[type="date"],
   background-color: black !important;
   border-color: #00ff00 !important;
   color: #00ff00 !important;
+  font-family: 'Press Start 2P';
+  font-size: small;
 }
 
 .matrix-mode .progress {

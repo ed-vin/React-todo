@@ -31,7 +31,7 @@ function App() {
       setUsername(savedUsername);
     }
 
-    // Kolla om användaren tidigare har valt Matrix Mode
+    // Ceck if user has selected Matrix Mode
     const savedMatrixMode = localStorage.getItem('matrixMode') === 'true';
     setIsMatrixMode(savedMatrixMode);
     if (savedMatrixMode) {
@@ -138,15 +138,15 @@ function App() {
     <div className="app-wrapper">
       {!username ? (
         <div className="set-username">
-          <h2>Välj ett användarnamn</h2>
+          <h2>Username</h2>
           <form onSubmit={handleSetUsername}>
             <input
               type="text"
               value={inputUsername}
               onChange={(e) => setInputUsername(e.target.value)}
-              placeholder="Användarnamn"
+              placeholder="Username"
             />
-            <button type="submit">Starta</button>
+            <button type="submit">Start</button>
           </form>
         </div>
       ) : (

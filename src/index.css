@@ -1,4 +1,4 @@
-/* === Globala variabler & typografi === */
+/* === Global style === */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -29,10 +29,10 @@ body {
   padding: 20px;
   background-color: #1b1b1b;
   color: #e0e0e0;
-  transition: background-color 0.3s, color 0.3s; /* För smidig övergång */
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* === Matrix-stil === */
+/* === Matrix-mode === */
 .matrix-mode {
   background-color: #000000 !important;
   color: #00ff00 !important;
@@ -51,7 +51,7 @@ body {
   color: black !important;
 }
 
-/* === Reset & Baslayout === */
+/* === Reset & layout === */
 * {
   margin: 0;
   padding: 0;

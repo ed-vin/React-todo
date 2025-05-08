@@ -1,5 +1,4 @@
 import { useState } from 'react';
-//import './TodoList.css';
 
 function TodoList({
   todos,
@@ -11,18 +10,18 @@ function TodoList({
 }) {
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
 
-  // Filtrera todos baserat på selectedDate
+  // Filtrer todos based on selectedDate
   const filteredTodos = todos.filter((todo) => todo.date === selectedDate);
 
   return (
     <div className="todo-container">
-      <h2>Dagens uppgifter</h2>
+      <h2>Add task</h2>
       <div className="todo-inputs">
         <input
           type="text"
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}
-          placeholder="Ny uppgift..."
+          placeholder="New task..."
         />
         <input
           type="date"
@@ -30,15 +29,16 @@ function TodoList({
           onChange={(e) => setSelectedDate(e.target.value)} // Uppdatera datum
         />
         <button type="button" onClick={() => handleAddTodo(selectedDate)}>
-          Lägg till
+          Add new
         </button>
         <button type="button" onClick={() => handleClearTodos(selectedDate)} className="clear-btn">
-          Rensa alla
+          Remove all
         </button>
+        <h2>Today's Tasks</h2>
       </div>
       <ul className="todo-list">
         {filteredTodos.length === 0 ? (
-          <p>Inga uppgifter för det här datumet.</p>
+          <p>No task's this date.</p>
         ) : (
           filteredTodos.map((todo) => (
             <li key={todo.id} className={todo.completed ? 'completed' : ''}>
