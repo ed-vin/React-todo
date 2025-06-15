@@ -6,9 +6,6 @@
 
 ![Screenshot](https://github.com/ed-vin/React-todo-gamification/blob/main/public/screen2.png?raw=true)
 
-# Matrix Mode CSS
-![Screenshot](https://github.com/ed-vin/React-todo-gamification/blob/main/public/screen1.png?raw=true)
-
 ## Features
 
 - Create and save a username with localStorage
